@@ -1,6 +1,7 @@
-FROM debian:jessie
+FROM alpine
 
-RUN apt-get update && apt-get install -y figlet
+RUN apk update && apk upgrade
+RUN apk add figlet
 
 ENTRYPOINT ["figlet"]
 CMD ["--help"]
